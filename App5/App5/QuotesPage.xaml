@@ -15,7 +15,8 @@
             Text="{Binding
             Source={x:Reference slider},
             Path=Value,
-            StringFormat='Font Size: {0:N)}'}" />
+            StringFormat='Font Size: {0:N0}'}" />
+            
         <Label 
             x:Name="currentQuote"  
             FontSize="{Binding
