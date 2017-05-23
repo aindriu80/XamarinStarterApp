@@ -13,7 +13,7 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new StackPage();
+			MainPage = new GridPage();
 		}
 
 		protected override void OnStart ()
