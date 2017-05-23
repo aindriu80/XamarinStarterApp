@@ -1,34 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<ContentPage BackgroundColor="#127ac7"
+    
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="App5.StackPage">
-    <StackLayout Spacing="20" VerticalOptions="Center">
-        
-        <Image Source="XamarinLogo.png"/>
-        
+             x:Class="App5.StackPage">
+    <StackLayout Spacing="20" VerticalOptions="Center"  >
+
+        <Image Source="https://avatars0.githubusercontent.com/u/790012" />
+
+
+
         <Label
-        Text=" Welcome to Xamarin"
-        TextColor="White"
-        FontSize="30"
-        FontAttributes="Bold"
-        HorizontalOptions="Center"/>
-        
-    <Label
-        Text="Cross Platform apps made easy"
-        TextColor="White"
-        FontSize="18"
-        HorizontalOptions="Center"/>
-        
-    <Button
-        Text="Login"
-        TextColor="White"
-        BackgroundColor="#1dabf0"/>
-        
-    <Button
-        Text="Register"
-        TextColor="White"
-        BackgroundColor="#1dabf0"/>
+            Text=" Welcome to Xamarin"
+            TextColor="White"
+            FontSize="30"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"/>
+
+        <Label
+            Text="Cross Platform apps made easy"
+            TextColor="White"
+            FontSize="18"
+            HorizontalOptions="Center"/>
+
+        <Button
+            Text="Login"
+            TextColor="White"
+            BackgroundColor="#1dabf0"/>
+
+        <Button
+            Text="Register"
+            TextColor="White"
+            BackgroundColor="#1dabf0"/>
     </StackLayout>
 </ContentPage>
-
