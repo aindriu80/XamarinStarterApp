@@ -4,12 +4,24 @@
             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App5.AbsolutePage">
-    <!--<AbsoluteLayout>
-        <BoxView Color="Aqua"
-                 AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
-        <BoxView Color="White"
-                 AbsoluteLayout.LayoutBounds="0.5, 0.1,100,100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-        <Button Text="Get Started" BackgroundColor="Silver" TextColor="White"
-                AbsoluteLayout.LayoutBounds="0, 1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
-    </AbsoluteLayout>-->
+    
+    <AbsoluteLayout>
+        <BoxView Color="#f7f7f7" 
+                 AbsoluteLayout.LayoutBounds="0,0,1,0.3" AbsoluteLayout.LayoutFlags="All"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" AbsoluteLayout.LayoutFlags="All">
+        
+        <Label TextColor="Black" FontSize="60" Text="€11.95" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Button Text="Add €7.00" BackgroundColor="#1695A3" TextColor="White" BorderRadius="15" HeightRequest="40" FontSize="15" FontAttributes="Bold"/>
+        </StackLayout>
+        
+        <StackLayout Padding="40, 0" Spacing="20"
+                     AbsoluteLayout.LayoutBounds="0, 0.5,1,0.3" AbsoluteLayout.LayoutFlags="All">
+        <Label TextColor="Black" FontSize = "15" FontAttributes="Bold" Text="Why pay for credit?"
+               HorizontalOptions="Center"/>
+        <Label TextColor="Black" FontSize = "13" Text="Because you can reach people who aren't on SkyApp by calling mobile and landline numbers, or spending SMS, at low-cost rates." 
+               HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+            
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>
