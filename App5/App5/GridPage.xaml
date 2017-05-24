@@ -2,7 +2,7 @@
 <ContentPage 
     Padding="0,20,0,0"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App5.GridPage">
-    <Grid BackgroundColor="Yellow" RowSpacing="40" ColumnSpacing="20">
+    <!--<Grid BackgroundColor="Yellow" RowSpacing="40" ColumnSpacing="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="2*" />
@@ -19,5 +19,5 @@
         <Label Grid.Row="1" Grid.Column="1" Text="Label 4" BackgroundColor="Silver"></Label>
         <Label Grid.Row="2" Grid.ColumnSpan="3" Text="ColumnSpan" BackgroundColor="Silver"></Label>
         <Label Grid.Column="2" Grid.RowSpan="3" Text="RowSpan" BackgroundColor="Silver"></Label>
-    </Grid>
+    </Grid>-->
 </ContentPage>
