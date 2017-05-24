@@ -13,7 +13,7 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new RelativePage3();
+			MainPage = new ImagePage();
 		}
 
 		protected override void OnStart ()
