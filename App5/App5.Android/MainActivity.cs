@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using ImageCircle.Forms.Plugin.Droid;
+
 
 namespace App5.Droid
 {
@@ -20,7 +22,10 @@ namespace App5.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new App5.App ());
+
+		    ImageCircleRenderer.Init();
+
+            LoadApplication (new App5.App ());
 		}
 	}
 }
