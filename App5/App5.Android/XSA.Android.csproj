@@ -134,6 +134,14 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\Drawable\left" />
+    <AndroidResource Include="Resources\Drawable\right" />
+    <AndroidResource Include="Resources\drawable-hdpi\left" />
+    <AndroidResource Include="Resources\drawable-hdpi\right" />
+    <AndroidResource Include="Resources\drawable-xhdpi\left" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\left" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\right" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
