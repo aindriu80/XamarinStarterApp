@@ -9,7 +9,7 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new ImageExercise();
+			MainPage = new Lists();
 		}
 
 		protected override void OnStart ()
