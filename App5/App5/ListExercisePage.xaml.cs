@@ -67,9 +67,13 @@ namespace App5
 
 	    async void Handled_Clicked(object sender, EventArgs e)
 	    {
-	        await Navigation.PopAsync();
+	        await Navigation.PopModalAsync();
 	    }
 
+	    protected override bool OnBackButtonPressed()
+	    {
+	        return true;
+	    }
 	     
     }
 }

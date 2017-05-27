@@ -19,7 +19,7 @@ namespace App5
 
 	   async void Handle_Clicked(object sender, EventArgs e)
 	    {
-	        await Navigation.PushAsync(new ListExercisePage());
+	        await Navigation.PushModalAsync(new ListExercisePage());
 	    }
 
 	    protected override bool OnBackButtonPressed()
