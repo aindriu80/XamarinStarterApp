@@ -13,20 +13,20 @@ namespace App5
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Lists : ContentPage
 	{
+	    List<Contact> GetContacts()
+	    {
+	        return new List<Contact>
+	        {
+	            new Contact {Name = "Aindriu", ImageUrl = "http://lorempixel.com/100/100/people/1"},
+	            new Contact {Name = "John", ImageUrl = "http://lorempixel.com/100/100/people/2", Status = "Hey, let's talk!"}
+            };
+	    }
+
 	    private ObservableCollection<Contact> _contacts;
 		public Lists ()
 		{
 			InitializeComponent ();
-
-
-
-		    _contacts = new ObservableCollection<Contact>
-            {
-                    new Contact {Name = "Aindriu", ImageUrl = "http://lorempixel.com/100/100/people/1"},
-                    new Contact {Name = "John", ImageUrl = "http://lorempixel.com/100/100/people/2", Status = "Hey, let's talk!"}
-		    };
-
-            listView.ItemsSource = _contacts;
+		    listView.ItemsSource = GetContacts();
 		}
 
 	    private void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -54,6 +54,12 @@ namespace App5
 	    {
 	        var contact = (sender as MenuItem).CommandParameter as Contact;
 	        _contacts.Remove(contact);
+	    }
+
+	    private void Handle_Refreshing(object sender, EventArgs e)
+	    {
+	        listView.ItemsSource = GetContacts();
+            listView.EndRefresh();
 	    }
 	}
 }
