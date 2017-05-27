@@ -9,7 +9,11 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new ListExercisePage();
+			MainPage = new NavigationPage( new WelcomePage())
+			{
+			    BarBackgroundColor = Color.Gray,
+                BarTextColor = Color.White
+			};
 		}
 
 		protected override void OnStart ()

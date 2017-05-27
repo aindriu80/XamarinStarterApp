@@ -65,5 +65,11 @@ namespace App5
 	        DisplayAlert("Selected", search.Location, "OK");
 	    }
 
+	    async void Handled_Clicked(object sender, EventArgs e)
+	    {
+	        await Navigation.PopAsync();
+	    }
+
+	     
     }
 }
