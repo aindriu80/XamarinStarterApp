@@ -20,7 +20,7 @@ namespace App5
 
 		    listView.ItemsSource = new List<ContactGroup>
 		    {
-                new ContactGroup("M", "M")
+                new ContactGroup("A", "A")
                 {
                     new Contact {Name = "Aindriu", ImageUrl = "http://lorempixel.com/100/100/people/1"},
                 },
@@ -32,5 +32,17 @@ namespace App5
 
 		    };
 		}
+
+	    private void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+	    {
+	       var contact = e.Item as Contact;
+	        DisplayAlert("Tapped", contact.Name, "OK");
+	    }
+
+	    private void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+	    {
+	       var contact = e.SelectedItem as Contact;
+	        DisplayAlert("Selected", contact.Name, "OK");
+	    }
 	}
 }

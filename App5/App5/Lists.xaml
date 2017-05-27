@@ -7,7 +7,9 @@
               IsGroupingEnabled="True" 
               GroupDisplayBinding="{Binding Title}" 
               GroupShortNameBinding="{Binding ShortTitle}" 
-              HasUnevenRows="True">
+              HasUnevenRows="True"
+              ItemTapped="Handle_ItemTapped"
+              ItemSelected="Handle_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
