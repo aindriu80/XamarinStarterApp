@@ -9,7 +9,7 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new Lists();
+			MainPage = new ListExercisePage();
 		}
 
 		protected override void OnStart ()
