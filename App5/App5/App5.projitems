@@ -47,6 +47,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ContactGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuotesPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
