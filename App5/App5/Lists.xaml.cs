@@ -13,13 +13,18 @@ namespace App5
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Lists : ContentPage
 	{
-	    List<Contact> GetContacts()
+	    IEnumerable<Contact> GetContacts(string searchText = null)
 	    {
-	        return new List<Contact>
+            var contacts = new List<Contact>
 	        {
 	            new Contact {Name = "Aindriu", ImageUrl = "http://lorempixel.com/100/100/people/1"},
 	            new Contact {Name = "John", ImageUrl = "http://lorempixel.com/100/100/people/2", Status = "Hey, let's talk!"}
             };
+	        if (String.IsNullOrWhiteSpace(searchText))
+	            return contacts;
+
+	        return contacts.Where(c => c.Name.StartsWith(searchText));
+
 	    }
 
 	    private ObservableCollection<Contact> _contacts;
@@ -60,6 +65,11 @@ namespace App5
 	    {
 	        listView.ItemsSource = GetContacts();
             listView.EndRefresh();
+	    }
+
+	    private void Handle_TextChanged(object sender, TextChangedEventArgs e)
+	    {
+	       listView.ItemsSource = GetContacts(e.NewTextValue);
 	    }
 	}
 }

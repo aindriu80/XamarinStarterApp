@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App5.Lists">
     
-  
+    <StackLayout>
+        <SearchBar Placeholder="Search..." TextChanged="Handle_TextChanged" HeightRequest="50" />
         <ListView x:Name="listView" IsPullToRefreshEnabled="True" Refreshing="Handle_Refreshing">
             <ListView.ItemTemplate>
             <DataTemplate>
@@ -17,5 +18,6 @@
             </DataTemplate>
                 </ListView.ItemTemplate>
         </ListView>
-         
+    </StackLayout>
+    
 </ContentPage>
