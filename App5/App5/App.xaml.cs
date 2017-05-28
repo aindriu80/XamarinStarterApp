@@ -10,7 +10,7 @@ namespace App5
 			InitializeComponent();
 
 		    //MainPage = new NavigationPage(new ContactsPage());
-            MainPage = new ContactsPage();
+            MainPage = new MainPage2();
 
 			//{
 			//    BarBackgroundColor = Color.Gray,
