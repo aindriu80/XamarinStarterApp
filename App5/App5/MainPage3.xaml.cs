@@ -17,5 +17,19 @@ namespace App5
 			InitializeComponent ();
 
 		}
+
+	    async void Handle_Clicked(object sender, EventArgs e)
+	    {
+            // simple dialog box
+
+	        //var response = await DisplayAlert("Warning","Are you sure?","Yes","No");
+	        //if (response)
+	        //    DisplayAlert("Done", "Your response will be saved!", "OK");
+
+            //action sheet
+	       var response = await DisplayActionSheet("Title", "Cancel","Delete","Copy Link","Message","Email");
+	       await DisplayAlert("Response", response, "OK");
+
+	    }
 	}
 }
