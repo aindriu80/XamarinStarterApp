@@ -9,5 +9,9 @@
     
     <ContentPage>
         <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Icon="plus.png" Text="New" Activated="Handle_Activated" Order="Primary"/>
+            <ToolbarItem Icon="plus.png" Text="New" Activated="Handle_Activated" Order="Secondary"/>
+        </ContentPage.ToolbarItems>
     </ContentPage>
 </CarouselPage>

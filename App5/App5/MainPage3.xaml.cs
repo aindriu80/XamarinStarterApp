@@ -31,5 +31,10 @@ namespace App5
 	       await DisplayAlert("Response", response, "OK");
 
 	    }
+
+	    private void Handle_Activated(object sender, EventArgs e)
+	    {
+	        DisplayAlert("Activated", "Toolbar Activated", "OK");
+	    }
 	}
 }

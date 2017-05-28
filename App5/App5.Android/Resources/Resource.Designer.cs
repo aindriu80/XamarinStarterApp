@@ -2735,11 +2735,11 @@ namespace App5.Droid
 			// aapt resource value: 0x7f02010b
 			public const int notification_icon_background = 2130837771;
 			
-			// aapt resource value: 0x7f02010f
-			public const int notification_template_icon_bg = 2130837775;
-			
 			// aapt resource value: 0x7f020110
-			public const int notification_template_icon_low_bg = 2130837776;
+			public const int notification_template_icon_bg = 2130837776;
+			
+			// aapt resource value: 0x7f020111
+			public const int notification_template_icon_low_bg = 2130837777;
 			
 			// aapt resource value: 0x7f02010c
 			public const int notification_tile_bg = 2130837772;
@@ -2748,7 +2748,10 @@ namespace App5.Droid
 			public const int notify_panel_notification_icon_bg = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int right = 2130837774;
+			public const int plus = 2130837774;
+			
+			// aapt resource value: 0x7f02010f
+			public const int right = 2130837775;
 			
 			static Drawable()
 			{
