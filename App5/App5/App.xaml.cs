@@ -9,11 +9,12 @@ namespace App5
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage( new WelcomePage())
-			{
-			    BarBackgroundColor = Color.Gray,
-                BarTextColor = Color.White
-			};
+		    MainPage = new NavigationPage(new ContactsPage());
+
+			//{
+			//    BarBackgroundColor = Color.Gray,
+   //             BarTextColor = Color.White
+			//};
 		}
 
 		protected override void OnStart ()
