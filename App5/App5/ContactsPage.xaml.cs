@@ -6,16 +6,13 @@ using Xamarin.Forms.Xaml;
 namespace App5
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ContactsPage : ContentPage
+	public partial class ContactsPage : MasterDetailPage
 	{
-	    async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+	    void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 	    {
-	        if (e.SelectedItem == null)
-	            return;
-
 	        var contact = e.SelectedItem as Contact;
-	        await Navigation.PushAsync(new ContactDetailPage(contact));
-	        listView.SelectedItem = null;
+	        Detail = new NavigationPage(new ContactDetailPage(contact));
+	        IsPresented = false; // IsMasterPresented
 	    }
         public ContactsPage ()
 		{
