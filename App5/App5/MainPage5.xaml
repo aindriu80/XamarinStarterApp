@@ -5,5 +5,10 @@
     <StackLayout>
     <Switch IsToggled="True" Toggled="Switch_OnToggled"/>
     <Label Text="Content" x:Name="label"/>
+
+        <Slider x:Name="slider" Maximum="255" Minimum="0" Value="50" ValueChanged="Slider_OnValueChanged" />
+        <Label Text="{Binding Source={x:Reference slider},Path=Value, StringFormat='{0:N0}'}"></Label>
+        <Stepper x:Name="stepper" Increment="5"/>
+        <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
     </StackLayout>
 </ContentPage>

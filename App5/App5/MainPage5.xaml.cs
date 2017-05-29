@@ -21,5 +21,10 @@ namespace App5
 	    {
 	        label.IsVisible = e.Value;
 	    }
+
+	    private void Slider_OnValueChanged(object sender, ValueChangedEventArgs e)
+	    {
+	        var go = e.OldValue;
+	    }
 	}
 }
