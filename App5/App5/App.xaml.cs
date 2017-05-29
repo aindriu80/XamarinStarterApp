@@ -9,14 +9,14 @@ namespace App5
 		{
 			InitializeComponent();
 
-		    MainPage = new NavigationPage(new MainPage3());
-          //  MainPage = new MainPage3();
-
-			//{
-			//    BarBackgroundColor = Color.Gray,
-   //             BarTextColor = Color.White
-			//};
-		}
+		    MainPage = new NavigationPage(new MainPage4());
+            
+            //  MainPage = new MainPage3();
+            //{
+            //    BarBackgroundColor = Color.Gray,
+            //             BarTextColor = Color.White
+            //};
+        }
 
 		protected override void OnStart ()
 		{

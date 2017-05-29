@@ -142,6 +142,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\right" />
     <AndroidResource Include="Resources\drawable-xxhdpi\left" />
     <AndroidResource Include="Resources\drawable-xxhdpi\right" />
+    <AndroidResource Include="Resources\drawable-hdpi\heart" />
+    <AndroidResource Include="Resources\drawable-hdpi\user" />
+    <AndroidResource Include="Resources\drawable-xhdpi\user" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\heart" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\user" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -180,6 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\heart.png" />
   </ItemGroup>
   <Import Project="..\App5\App5.projitems" Label="Shared" Condition="Exists('..\App5\App5.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
