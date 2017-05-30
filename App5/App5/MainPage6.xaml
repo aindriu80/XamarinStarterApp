@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:App5.Extensions"
              x:Class="App5.MainPage6">
     <TableView Intent="Form">
         <TableRoot>
@@ -8,12 +9,9 @@
                 <TextCell Text="Name" Detail="Aindriu Mac Giolla Eoin"/>
                 <EntryCell Label="Title" Placeholder="(e.g. Shopping)"/>
                 <SwitchCell Text="Notifications" On="True"/>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="13,0">
-                        <Label Text="Starts" VerticalOptions="Center"/>
-                        <DatePicker Date="1 Jan 2017" HorizontalOptions="EndAndExpand"/>
-                    </StackLayout>
-                </ViewCell>
+                <extensions:DateCell Label="Starts"/>
+                <extensions:DateCell Label="Ends"/>
+                
             </TableSection>
         </TableRoot>
     </TableView>
