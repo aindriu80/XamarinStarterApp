@@ -61,5 +61,10 @@ namespace App5
 
             DisplayAlert("Selection",name, "OK");
 	    }
+
+	    private void DatePicker_OnDateSelected(object sender, DateChangedEventArgs e)
+	    {
+	        
+	    }
 	}
 }
