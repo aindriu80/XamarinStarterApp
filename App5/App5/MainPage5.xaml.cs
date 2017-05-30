@@ -26,5 +26,15 @@ namespace App5
 	    {
 	        var go = e.OldValue;
 	    }
+
+	    private void Entry_OnCompleted(object sender, EventArgs e)
+	    {
+	        PasswordLabel.Text = "Completed";
+	    }
+
+	    private void Entry_OnTextChanged(object sender, TextChangedEventArgs e)
+	    {
+	        PasswordLabel2.Text = e.NewTextValue;
+	    }
 	}
 }
