@@ -16,5 +16,18 @@ namespace App5
 		{
 			InitializeComponent ();
 		}
+
+	    private void Cell_OnTapped(object sender, EventArgs e)
+	    {
+	        var page = new ContactMethodsPage();
+	        page.ContactMetods.ItemSelected += (source, args) =>
+	        {
+	            contactMethod.Text = args.SelectedItem.ToString();
+	            Navigation.PopAsync();
+	        };
+
+
+            Navigation.PushAsync(page);
+	    }
 	}
 }
