@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ContactMethod.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ContactsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
