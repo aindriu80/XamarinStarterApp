@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.FormsAndSettingPages">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="Add_OnClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="contacts" ItemSelected="Contact_Selected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding FullName}">
+                    <TextCell.ContextActions>
+                        <MenuItem 
+                            Text="Delete" 
+                            IsDestructive="true" 
+                            Clicked="MenuDelete_OnClicked"
+                            CommandParameter="{Binding .}" />
+                    </TextCell.ContextActions>
+                </TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
