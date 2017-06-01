@@ -1,11 +1,10 @@
-﻿using System;
+﻿using App5.Models;
 using System.Collections.Generic;
 using System.Linq;
-using App5.Models;
 
 namespace App5
 {
-	public class UserService
+    public class UserService
 	{
 		private List<User> _users = new List<User>
 		{

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using App5.Models;
+using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App5.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace App5
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FormsAndSettingPages : ContentPage
 	{
 	    private ObservableCollection<ContactDetail> _contacts;

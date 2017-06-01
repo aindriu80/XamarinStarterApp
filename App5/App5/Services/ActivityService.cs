@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using App5.Models;
+﻿using App5.Models;
+using System.Collections.Generic;
 
 namespace App5
 {
-	public class ActivityService
+    public class ActivityService
 	{
 		public IEnumerable<Activity> GetActivities()
 		{
