@@ -9,7 +9,7 @@ namespace App5
 		{
 			InitializeComponent();
 
-		    MainPage = new NavigationPage(new FormsAndSettingPages());
+		    MainPage = new NavigationPage(new MainPage7());
             
             //  MainPage = new MainPage3();
             //{
