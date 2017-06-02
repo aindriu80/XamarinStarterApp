@@ -13,14 +13,7 @@ namespace App5
 			InitializeComponent ();
 
 		    BindingContext = Application.Current;
-
-		    
-
-		   
 		}
-
-	    
-
 	    
 	}
 }
