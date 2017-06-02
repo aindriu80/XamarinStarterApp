@@ -1,8 +1,11 @@
-﻿using App5.Persistence;
+﻿using App5.Droid.Resources;
+using App5.Persistence;
 using SQLite;
 using System;
 using System.IO;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(SQLiteDb))]
 namespace App5.Droid.Resources
 {
     public class SQLiteDb : ISQLiteDb

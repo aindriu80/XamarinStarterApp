@@ -5,17 +5,17 @@ namespace App5
 {
     public partial class App : Application
 	{
-	    private const string Titlekey = "Name";
-	    private const string NotificationsEnabledKey = "NotificationsEnabled";
+	    //private const string Titlekey = "Name";
+	    //private const string NotificationsEnabledKey = "NotificationsEnabled";
 
         public App ()
 		{
 
 			InitializeComponent();
 
-		    MainPage = new NavigationPage(new MainPage8());
+		 //   MainPage = new NavigationPage(new MainPage8());
             
-            //  MainPage = new MainPage3();
+              MainPage = new MainPage8();
             //{
             //    BarBackgroundColor = Color.Gray,
             //             BarTextColor = Color.White
@@ -37,34 +37,34 @@ namespace App5
 			// Handle when your app resumes
 		}
 
-	    public string Title
-	    {
-	        get
-	        {
-	            if (Properties.ContainsKey(Titlekey))
-	             return  Properties[Titlekey].ToString();
+	    //public string Title
+	    //{
+	    //    get
+	    //    {
+	    //        if (Properties.ContainsKey(Titlekey))
+	    //         return  Properties[Titlekey].ToString();
 
-	            return"";
-	        }
-	        set
-	        {
-	            Properties[Titlekey] = value;
-	        }
-	    }
+	    //        return"";
+	    //    }
+	    //    set
+	    //    {
+	    //        Properties[Titlekey] = value;
+	    //    }
+	    //}
 
-	    public bool NotificationsEnabled
-	    {
-	        get
-	        {
-	            if (Properties.ContainsKey(NotificationsEnabledKey))
-	                return (bool) Properties[NotificationsEnabledKey];
+	    //public bool NotificationsEnabled
+	    //{
+	    //    get
+	    //    {
+	    //        if (Properties.ContainsKey(NotificationsEnabledKey))
+	    //            return (bool) Properties[NotificationsEnabledKey];
 
-	            return false;
-	        }
-	        set
-	        {
-	            Properties[NotificationsEnabledKey] = value;
-	        }
-	    }
+	    //        return false;
+	    //    }
+	    //    set
+	    //    {
+	    //        Properties[NotificationsEnabledKey] = value;
+	    //    }
+	    //}
 	}
 }
