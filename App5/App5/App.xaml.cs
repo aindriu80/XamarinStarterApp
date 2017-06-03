@@ -15,7 +15,7 @@ namespace App5
 
 		 //   MainPage = new NavigationPage(new MainPage8());
             
-              MainPage = new MainPage8();
+              MainPage = new MainPage9();
             //{
             //    BarBackgroundColor = Color.Gray,
             //             BarTextColor = Color.White

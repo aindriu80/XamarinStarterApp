@@ -94,6 +94,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage8.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage9.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Activity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
@@ -242,6 +245,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage8.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage9.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <None Include="$(MSBuildThisFileDirectory)XamarinLogo.png" />

@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 
 namespace App5
 {
+    
+
     public class Recipe : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -44,6 +46,8 @@ namespace App5
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage8 : ContentPage
     {
+       
+
         private SQLiteAsyncConnection _connection;
         private ObservableCollection<Recipe> _recipes;
 
@@ -93,5 +97,7 @@ namespace App5
 	       await _connection.DeleteAsync(recipe);
 	        _recipes.Remove(recipe);
 	    }
+
+
     }
 }
