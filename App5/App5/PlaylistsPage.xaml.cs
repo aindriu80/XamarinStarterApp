@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App5.Models;
+using App5.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,39 +14,30 @@ namespace App5
 	//[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PlaylistsPage : ContentPage
 	{
-	    private ObservableCollection<Playlist> _playlists = new ObservableCollection<Playlist>();
+	  
         public PlaylistsPage ()
 		{
+            BindingContext = new PlaylistViewModel();
 			InitializeComponent ();
 		}
 
 	    protected override void OnAppearing()
 	    {
-	        playlistsListView.ItemsSource = _playlists;
 
 	        base.OnAppearing();
 	    }
 
 	    void OnAddPlaylist(object sender, System.EventArgs e)
 	    {
-	        var newPlaylist = "Playlist " + (_playlists.Count + 1);
+	     (BindingContext as PlaylistViewModel).AddPlaylist();
 
-	        _playlists.Add(new Playlist { Title = newPlaylist });
-
-	        this.Title = $"{_playlists.Count} Playlists";
 	    }
 
 	    void OnPlaylistSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 	    {
-	        if (e.SelectedItem == null)
-	            return;
+	     (BindingContext as PlaylistViewModel).SelectPlaylist(e.SelectedItem as Playlist);
 
-	        var playlist = e.SelectedItem as Playlist;
-	        playlist.IsFavorite = !playlist.IsFavorite;
-
-	        playlistsListView.SelectedItem = null;
-
-	        //await Navigation.PushAsync (new PlaylistDetailPage(playlist));
+	     
 	    }
     }
 }
