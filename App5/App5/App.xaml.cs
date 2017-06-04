@@ -1,4 +1,5 @@
 ﻿
+using App5.Models;
 using Xamarin.Forms;
 
 namespace App5
@@ -13,9 +14,9 @@ namespace App5
 
 			InitializeComponent();
 
-		 //   MainPage = new NavigationPage(new MainPage8());
+		    MainPage = new NavigationPage(new MoviesPage());
             
-              MainPage = new MainPage9();
+           //   MainPage = new MainPage9();
             //{
             //    BarBackgroundColor = Color.Gray,
             //             BarTextColor = Color.White
