@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using App5.ViewModels;
 using Xamarin.Forms;
 
 namespace App5.Models
 {
-    public class Playlist : INotifyPropertyChanged
+    public class Playlist : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public string Title { get; set; }
 
@@ -21,12 +14,7 @@ namespace App5.Models
             get { return _isFavorite; }
             set
             {
-                if (_isFavorite == value)
-                    return;
-
-                _isFavorite = value;
-
-                OnPropertyChanged();
+                SetValue(ref _isFavorite, value);
                 OnPropertyChanged(nameof(Color));
             }
         }
@@ -36,10 +24,7 @@ namespace App5.Models
             get { return IsFavorite ? Color.Pink : Color.Black; }
         }
 
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+       
     }
 
 }

@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using App5.Models;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using App5.Models;
 
 namespace App5.ViewModels
 {
-    public class PlaylistViewModel
+    public class PlaylistViewModel : BaseViewModel
     {
         public ObservableCollection<Playlist> Playlists { get; private set; }= new ObservableCollection<Playlist>();
-        public Playlist SelectedPlaylist { get; set; }
+
+        private Playlist _selectedPlaylist;
+        
+        public Playlist SelectedPlaylist
+        {
+            get { return _selectedPlaylist; }
+            set { SetValue(ref _selectedPlaylist, value); }
+        }
 
         public void AddPlaylist()
         {
