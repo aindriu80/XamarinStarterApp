@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App5
 {
-    
+
 
     public class Recipe : INotifyPropertyChanged
     {

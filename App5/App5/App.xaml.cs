@@ -1,6 +1,4 @@
-﻿
-using App5.Models;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace App5
 {
@@ -14,7 +12,7 @@ namespace App5
 
 			InitializeComponent();
 
-		    MainPage = new NavigationPage(new MoviesPage());
+		    MainPage = new NavigationPage(new PlaylistsPage());
             
            //   MainPage = new MainPage9();
             //{
