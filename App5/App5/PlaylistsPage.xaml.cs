@@ -28,7 +28,7 @@ namespace App5
 
 	    void OnPlaylistSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 	    {
-	     (BindingContext as PlaylistViewModel).SelectPlaylist(e.SelectedItem as Playlist);
+	     (BindingContext as PlaylistViewModel).SelectPlaylist(e.SelectedItem as PlaylistViewModel);
 
 	     
 	    }

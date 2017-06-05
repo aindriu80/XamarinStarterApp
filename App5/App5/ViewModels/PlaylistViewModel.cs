@@ -1,15 +1,16 @@
 ﻿using App5.Models;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
 
 namespace App5.ViewModels
 {
     public class PlaylistViewModel : BaseViewModel
     {
-        public ObservableCollection<Playlist> Playlists { get; private set; }= new ObservableCollection<Playlist>();
+        public ObservableCollection<PlaylistViewModel> Playlists { get; private set; }= new ObservableCollection<PlaylistViewModel>();
 
-        private Playlist _selectedPlaylist;
+        private PlaylistViewModel _selectedPlaylist;
         
-        public Playlist SelectedPlaylist
+        public PlaylistViewModel SelectedPlaylist
         {
             get { return _selectedPlaylist; }
             set { SetValue(ref _selectedPlaylist, value); }
@@ -19,10 +20,10 @@ namespace App5.ViewModels
         {
             var newPlaylist = "Playlist " + (Playlists.Count + 1);
 
-            Playlists.Add(new Playlist { Title = newPlaylist });
+            Playlists.Add(new PlaylistViewModel { Title = newPlaylist });
         }
 
-        public void SelectPlaylist(Playlist playlist)
+        public void SelectPlaylist(PlaylistViewModel playlist)
         {
             if (playlist == null)
                 return;
@@ -33,5 +34,27 @@ namespace App5.ViewModels
 
             //await Navigation.PushAsync (new PlaylistDetailPage(playlist));
         }
+
+
+        public string Title { get; set; }
+
+        private bool _isFavorite;
+        public bool IsFavorite
+        {
+            get { return _isFavorite; }
+            set
+            {
+                SetValue(ref _isFavorite, value);
+                OnPropertyChanged(nameof(Color));
+            }
+        }
+
+        public Color Color
+        {
+            get { return IsFavorite ? Color.Pink : Color.Black; }
+        }
+
+
+
     }
 }
