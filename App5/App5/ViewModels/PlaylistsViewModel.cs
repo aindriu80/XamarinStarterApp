@@ -20,6 +20,7 @@ namespace App5.ViewModels
         }
 
         public ICommand AddPlayListCommand { get; private set; }
+        public ICommand SelectPlaylistCommand { get; private set; }
 
         private readonly IPageService _pageService;
         public PlaylistsViewModel(IPageService pageService)
@@ -27,6 +28,7 @@ namespace App5.ViewModels
             _pageService = pageService;
 
             AddPlayListCommand = new Command(AddPlaylist);
+            SelectPlaylistCommand = new Command<PlaylistViewModel>(async vm => await SelectPlaylist(vm));
         }
 
         private void AddPlaylist()
@@ -36,7 +38,7 @@ namespace App5.ViewModels
             Playlists.Add(new PlaylistViewModel { Title = newPlaylist });
         }
 
-        public async Task SelectPlaylist(PlaylistViewModel playlist)
+        private async Task SelectPlaylist(PlaylistViewModel playlist)
         {
             if (playlist == null)
                 return;

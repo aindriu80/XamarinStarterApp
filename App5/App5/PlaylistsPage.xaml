@@ -9,6 +9,7 @@
     <ListView 
               SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}"
               ItemsSource="{Binding Playlists}"
+              
               ItemSelected="OnPlaylistSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
