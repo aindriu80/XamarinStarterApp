@@ -144,7 +144,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IPageService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PlaylistViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PageService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PlaylistsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WelcomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
