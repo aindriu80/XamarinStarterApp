@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System;
+using System.Windows.Input;
 
 namespace App5.ViewModels
 {
@@ -18,13 +19,17 @@ namespace App5.ViewModels
             set { SetValue(ref _selectedPlaylist, value); }
         }
 
+        public ICommand AddPlayListCommand { get; private set; }
+
         private readonly IPageService _pageService;
         public PlaylistsViewModel(IPageService pageService)
         {
             _pageService = pageService;
+
+            AddPlayListCommand = new Command(AddPlaylist);
         }
 
-        public void AddPlaylist()
+        private void AddPlaylist()
         {
             var newPlaylist = "Playlist " + (Playlists.Count + 1);
 
