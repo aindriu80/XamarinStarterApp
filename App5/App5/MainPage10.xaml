@@ -6,23 +6,23 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Int32 x:Key="borderRadius">20</x:Int32>
-            <Color x:Key="buttonBackgroundColor">Gray</Color>
+            <Color x:Key="buttonBackgroundColor">Green</Color>
+            <Style x:Key="Button" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="Gray"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BorderRadius" Value="20"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
+    
     <StackLayout Spacing="20" VerticalOptions="Center">
-        <Button Text="Login" 
-                BackgroundColor="{DynamicResource buttonBackgroundColor}" 
-                TextColor="White" 
-                BorderRadius="{StaticResource borderRadius}"
-                FontAttributes="Bold" />
-
-        <Button Text="Register" 
-                BackgroundColor="{DynamicResource buttonBackgroundColor}" 
-                TextColor="White" 
-                BorderRadius="{StaticResource borderRadius}"
-                FontAttributes="Bold" />
+      
         
-        <Button Text="Change Style" Clicked="Handle_Clicked"/>
+        <Button Text="Login" BackgroundColor="{StaticResource buttonBackgroundColor}" />
+
+        <Button Text="Register" />
+        
     </StackLayout>
 </ContentPage>
