@@ -12,7 +12,7 @@ namespace App5
 
 			InitializeComponent();
 
-		    MainPage = new NavigationPage(new PlaylistsPage());
+		    MainPage = new NavigationPage(new MainPage10());
             
            //   MainPage = new MainPage9();
             //{
