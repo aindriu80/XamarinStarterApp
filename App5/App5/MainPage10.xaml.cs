@@ -17,5 +17,10 @@ namespace App5
 			InitializeComponent ();
 
 		}
+
+	    private void Handle_Clicked(object sender, EventArgs e)
+	    {
+	        Resources["buttonBackgroundColor"]=Color.Pink;
+	    }
 	}
 }
